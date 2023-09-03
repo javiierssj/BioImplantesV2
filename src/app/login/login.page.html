@@ -13,11 +13,12 @@
     <br>
     <ion-item>
 
-      <ion-input label="Usuario" placeholder="Ingrese su usuario"></ion-input>
+      <ion-input label="Usuario" placeholder="Ingrese su usuario" minlength="3" required></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input label="Contraseña" type="password" placeholder="Ingrese su contraseña"></ion-input>
+      <ion-input label="Contraseña" type="password" placeholder="Ingrese su contraseña" maxlength="10" required></ion-input>
     </ion-item>
+    <ion-text [routerLink]="['/registro']">¿No tienes una cuenta? Creala</ion-text>
     <br>
     <ion-button shape="round">Ingresar</ion-button>
   </ion-card>
