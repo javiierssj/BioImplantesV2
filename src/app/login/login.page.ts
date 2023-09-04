@@ -41,7 +41,7 @@ export class LoginPage {
   async mostrarMensajeError() {
     const alert = await this.alertController.create({
       header: 'Error',
-      message: 'Credenciales inválidas. Por favor, verifica tu correo y contraseña.',
+      message: 'Credenciales inválidas. Por favor, verifica tu usuario y contraseña.',
       buttons: ['OK'],
     });
     await alert.present();
