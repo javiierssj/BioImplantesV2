@@ -21,7 +21,8 @@ export class RegistroPage {
   async registrarUsuario() {
     // Validar el formato del correo electrónico y la contraseña aquí
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    const contrasenaPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{10,}$/;
+    const contrasenaPattern = /^(?=(?:[^A-Za-z]*[A-Za-z]){3})(?=(?:\D*\d){4})[A-Za-z\d]{10,}$/;
+;
 
     if (!emailPattern.test(this.correo)) {
       this.mostrarMensajeError('El correo electrónico no es válido.');
@@ -36,7 +37,7 @@ export class RegistroPage {
     localStorage.setItem('nombreUsuario', this.nombre);
     localStorage.setItem('correoUsuario', this.correo);
     localStorage.setItem('contrasenaUsuario', this.contrasena);
-    
+
     this.mostrarRegistroExitoso();
     this.redirigirAInicioDeSesion();
     
