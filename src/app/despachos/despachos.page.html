@@ -15,6 +15,11 @@
       <ion-item (click)="abrirPagina('Despachos')">
         <ion-label>Despachos</ion-label>
       </ion-item>
+
+      <ion-item (click)="navegar('Cuenta')">
+        <ion-label>Cuenta</ion-label>
+      </ion-item>
+
     </ion-list>
   </ion-content>
 </ion-menu>
@@ -30,25 +35,3 @@
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Bienvenido</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p>Estás en la cuenta de: {{ nombreUsuario }}</p>
-      <!-- Puedes mostrar más detalles de la cuenta aquí si es necesario -->
-    </ion-card-content>
-      <!-- Botón de cierre de sesión -->
-  <ion-button (click)="cerrarSesion()">Cerrar Sesión</ion-button>
-  </ion-card>
-  <br>
-  </ion-content>
-</div>
-
-
-<
-
-
-  
-

@@ -35,6 +35,14 @@ const routes: Routes = [
     path: 'menu-login',
     loadChildren: () => import('./menu-login/menu-login.module').then( m => m.MenuLoginPageModule)
   },
+  {
+    path: 'bodega',
+    loadChildren: () => import('./bodega/bodega.module').then( m => m.BodegaPageModule)
+  },
+  {
+    path: 'despachos',
+    loadChildren: () => import('./despachos/despachos.module').then( m => m.DespachosPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-login',
@@ -11,7 +12,8 @@ export class MenuLoginPage {
 
   constructor(
     private navCtrl: NavController,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -41,5 +43,14 @@ export class MenuLoginPage {
 
     // Redirigir al usuario a la página de inicio
     this.navCtrl.navigateRoot('/home'); // Reemplaza '/inicio' con la ruta real de tu página de inicio
+  }
+  abrirPagina(pagina: string) {
+    if (pagina === 'Bodega') {
+      // Navegar a la página de Bodega
+      this.router.navigate(['/bodega']); // Asegúrate de definir la ruta correcta
+    } else if (pagina === 'Despachos') {
+      // Navegar a la página de Despachos
+      this.router.navigate(['/despachos']); // Asegúrate de definir la ruta correcta
+    }
   }
 }
