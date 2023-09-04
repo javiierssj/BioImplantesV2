@@ -1,6 +1,14 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
     <ion-title color="primary">Login</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="regresarAInicio()">
+        <!-- <ion-icon name="close"></ion-icon> -->
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -12,18 +20,17 @@
     <ion-card-subtitle>Para iniciar sesión por favor ingrese sus credenciales:</ion-card-subtitle>
     <br>
     <ion-item>
-
-      <ion-input label="Usuario" placeholder="Ingrese su usuario" minlength="3" required></ion-input>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input placeholder="Ingrese su usuario" minlength="3" required [(ngModel)]="usuario"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input label="Contraseña" type="password" placeholder="Ingrese su contraseña" maxlength="10" required></ion-input>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" placeholder="Ingrese su contraseña" maxlength="10" required [(ngModel)]="contrasena"></ion-input>
     </ion-item>
     <ion-text [routerLink]="['/registro']">¿No tienes una cuenta? Creala</ion-text>
     <br>
-    <ion-button shape="round">Ingresar</ion-button>
+    <ion-button shape="round" (click)="validarCredenciales()">Ingresar</ion-button>
   </ion-card>
-</ion-content>
-<ion-content>
 
 
 </ion-content>

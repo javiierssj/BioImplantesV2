@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Menu Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Bienvenido</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Estás en la cuenta de: {{ nombreUsuario }}</p>
+      <!-- Puedes mostrar más detalles de la cuenta aquí si es necesario -->
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botón de cierre de sesión -->
+  <ion-button (click)="cerrarSesion()">Cerrar Sesión</ion-button>
+</ion-content>
