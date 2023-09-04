@@ -43,6 +43,10 @@ const routes: Routes = [
     path: 'despachos',
     loadChildren: () => import('./despachos/despachos.module').then( m => m.DespachosPageModule)
   },
+  {
+    path: 'recuperar-contrasena',
+    loadChildren: () => import('./recuperar-contrasena/recuperar-contrasena.module').then( m => m.RecuperarContrasenaPageModule)
+  },
 ];
 
 @NgModule({
